@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/angular.js" type="text/javascript"></script>
+</head>
+<body>
+     
+    <div ng-app>
+         
+         <input type="checkbox" ng-model="hide" name="data"> Enabled
+         <button ng-hide="hide">Disabled</button>
+         <p>
+            <span ng-bind="name">
+
+            </span>
+         </p>
+         
+         
+    </div>
+    <div ng-app>
+        <p>
+            total click {{click}}
+         </p>
+         <button ng-click="click = {{click}}+1"> click me</button>
+     </div>
+</body>
+</html>

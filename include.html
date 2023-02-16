@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <input type="checkbox" ng-model="hide" > Hide Salary
+        <tr>
+            <td >Name</td>
+            <td >RollNo</td>
+            <td >City</td>
+            <!-- <td ng-hide="hide">Salary</td> -->
+            <td ng-hide="hide">Salary</td>
+            <td  ng-show="hide">Salary</td>
+        </tr>
+        <!-- <tr ng-repeat="student in friends | orderBy:order"> -->
+        <tr ng-repeat="student in friends|orderBy:order">
+            <th>{{student.name}}</th>
+            <th>{{student.rollno}}</th>
+            <th>{{student.city}}</th>
+            <th ng-hide="hide">{{student.salary}}</th>
+            <th ng-show="hide">****</th>
+    
+        </tr>
+    </table>
+</body>
+</html>
