@@ -24,18 +24,18 @@
 // });
 
 
-var tr=angular.module("my_mod2",[])
-tr.controller("time", function($scope){
-    // $scope.arr=["divyanshu", "anurag", "aryan", "Isha", "gauri"];
-    $scope.friends = [
-    {name:'Divyanshu', rollno:21, city:"Sasni", salary:56},
-    {name:'Isha', rollno:1,city:"Agra", salary:85},
-    {name:'Anurag', rollno:2,city:"sasni", salary:59}
-  ];
-  // $scope.myfun=function(f){
-  //   $scope.order=f;
-  // }
-});
+// var tr=angular.module("my_mod2",[])
+// tr.controller("time", function($scope){
+//     // $scope.arr=["divyanshu", "anurag", "aryan", "Isha", "gauri"];
+//     $scope.friends = [
+//     {name:'Divyanshu', rollno:21, city:"Sasni", salary:56},
+//     {name:'Isha', rollno:1,city:"Agra", salary:85},
+//     {name:'Anurag', rollno:2,city:"sasni", salary:59}
+//   ];
+//   // $scope.myfun=function(f){
+//   //   $scope.order=f;
+//   // }
+// });
 
 // my_mod.filter('my_fit',function(){
 //     return function(text){
@@ -52,17 +52,40 @@ tr.controller("time", function($scope){
 //     }
 // });
 
-var t=angular.module("my_mod",[])
-t.controller("mymod",function($scope){
-    $scope.date="Controller 1";
+// var t=angular.module("my_mod",[])
+// t.controller("mymod",function($scope){
+//     $scope.date="Controller 1";
 
-  });
+//   });
  
-t.controller("mymod2",function($scope){
-    $scope.date="Controller 2";
+// t.controller("mymod2",function($scope){
+//     $scope.date="Controller 2";
 
-  });
-t.run( function($rootScope){
-    $rootScope.date="root scope Controller ";
+//   });
+// t.run( function($rootScope){
+//     $rootScope.date="root scope Controller ";
 
+//   });
+
+  var timr=angular.module("interval",[])
+timr.controller("mymod",function($scope, $location, $interval, $timeout,$window){
+    $scope.date="Divyanshu";
+    $scope.count=0;
+    $scope.timeout=location.pathname;
+    // $interval(function () {
+    //   // $scope.count++;
+    //   $scope.date=new Date
+       
+    // },1000)
+    $timeout(function () {
+      // $scope.count++;
+      $scope.date="timeout"
+     
+    },3000)
+    // $scope.date=new Date
+
+    $scope.WindowClick=function(data){
+      $scope.date=data
+$window.alert("Hello message "+date)
+    }
   });
